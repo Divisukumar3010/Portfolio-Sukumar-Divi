@@ -10,17 +10,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <style jsx global>{`
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        body {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-      `}</style>
-      
+    <div className="min-h-screen bg-white font-sans">
       <Hero />
       <About />
       <Skills />
