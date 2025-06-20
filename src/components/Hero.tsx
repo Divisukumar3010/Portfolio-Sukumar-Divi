@@ -1,7 +1,7 @@
 
 import { ArrowDown, Sparkles, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import pic from './clg pic.jpg'
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -23,10 +23,10 @@ const Hero = () => {
           {/* Left side - Text content */}
           <div className="space-y-8 animate-fade-in lg:text-left text-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-cyan-400 text-sm font-light mb-6">
-                <Sparkles className="w-4 h-4" />
-                Available for opportunities
-              </div>
+              {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-cyan-400 text-sm font-light mb-6"> */}
+                {/* <Sparkles className="w-4 h-4" /> */}
+                {/* Available for opportunities */}
+              {/* </div> */}
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-white leading-none">
                 Hi, I'm{" "}
@@ -86,9 +86,9 @@ const Hero = () => {
               
               {/* Profile image container */}
               <div className="relative w-full h-full rounded-full border-4 border-white/10 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                  alt="Sukumar Divi" 
+                <img
+                  src={pic}
+                  alt="Sukumar Divi"
                   className="w-full h-full object-cover"
                 />
                 
