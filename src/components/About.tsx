@@ -9,26 +9,26 @@ const About = () => {
       title: "Java Development",
       description: "Building robust applications with Java and Spring framework, focusing on clean code and best practices",
       gradient: "from-orange-500 to-red-500",
-      stats: "15+ Projects"
+      stats: "8+ Projects"
     },
     {
       icon: Globe,
       title: "Web Development", 
       description: "Creating modern web experiences with React, Node.js, and cutting-edge technologies",
       gradient: "from-blue-500 to-cyan-500",
-      stats: "20+ Websites"
+      stats: "15+ Websites"
     },
     {
       icon: Zap,
       title: "Accelerator Training",
       description: "Preparing for intensive coding bootcamp programs and advanced software development",
       gradient: "from-purple-500 to-pink-500",
-      stats: "100+ Hours"
+      stats: "30+ Hours"
     }
   ];
 
   const stats = [
-    { icon: Rocket, label: "Projects Completed", value: "25+", color: "text-cyan-400" },
+    { icon: Rocket, label: "Projects Completed", value: "15+", color: "text-cyan-400" },
     { icon: Target, label: "Problem Solving", value: "95%", color: "text-green-400" },
     { icon: Users, label: "Team Projects", value: "10+", color: "text-purple-400" },
     { icon: Code, label: "Lines of Code", value: "50K+", color: "text-orange-400" }

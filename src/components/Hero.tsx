@@ -60,14 +60,16 @@ const Hero = () => {
                 <Sparkles className="w-5 h-5 mr-2 group-hover:animate-spin" />
                 View Projects
               </Button>
-              <Button 
+              <a href="/public/Sukumar_Divi_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Button 
                 variant="outline"
                 className="border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/30 px-10 py-4 text-lg font-light tracking-wide transition-all duration-300 transform hover:scale-105 group"
               >
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Download Resume
+                View Resume
               </Button>
-              <Button 
+              </a>
+              <Button
                 variant="ghost"
                 onClick={() => scrollToSection('contact')}
                 className="text-cyan-400 hover:text-cyan-300 px-6 py-4 text-lg font-light tracking-wide transition-all duration-300 transform hover:scale-105 group"

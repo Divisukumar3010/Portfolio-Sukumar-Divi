@@ -1,5 +1,10 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
@@ -7,33 +12,37 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack web application with user authentication, shopping cart, and payment integration using React and Spring Boot.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Spring Boot", "MySQL", "Tailwind CSS"],
-      githubUrl: "#"
+      title: "Weather Hub",
+      description:
+        "Full-stack weather tracking application, synchronizing data across 10+ locations. Optimized API calls, reducing data fetching latency by 35%",
+      image: "public/WeatherHub.png",
+      technologies: ["HTML/CSS", "Javascript", "API", "SQL"],
+      githubUrl: "https://github.com/Divisukumar3010/WeatherHub",
     },
     {
       title: "Task Management System",
-      description: "Collaborative project management tool with real-time updates, team collaboration features, and deadline tracking.",
+      description:
+        "Collaborative project management tool with real-time updates, team collaboration features, and deadline tracking.",
       image: "/placeholder.svg",
       technologies: ["Node.js", "React", "MongoDB", "Socket.io"],
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Weather Analytics Dashboard",
-      description: "Data visualization dashboard displaying weather patterns and forecasts with interactive charts and location-based data.",
+      description:
+        "Data visualization dashboard displaying weather patterns and forecasts with interactive charts and location-based data.",
       image: "/placeholder.svg",
       technologies: ["JavaScript", "Chart.js", "REST API", "Bootstrap"],
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       title: "Student Grade Tracker",
-      description: "Java desktop application for tracking student performance with grade calculations and progress reports.",
+      description:
+        "Java desktop application for tracking student performance with grade calculations and progress reports.",
       image: "/placeholder.svg",
       technologies: ["Java", "JavaFX", "SQLite", "Maven"],
-      githubUrl: "#"
-    }
+      githubUrl: "#",
+    },
   ];
 
   return (
@@ -45,16 +54,25 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-auto rounded-full"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+            <Card
+              key={index}
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden"
+            >
+              <div className="aspect-video relative overflow-hidden group">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <ExternalLink className="w-12 h-12 text-white/50 group-hover:text-cyan-400 group-hover:scale-110 transition-all duration-300" />
+                  {/* <ExternalLink className="w-12 h-12 text-white/50 group-hover:text-cyan-400 group-hover:scale-110 transition-all duration-300" /> */}
                 </div>
               </div>
+
               <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-normal text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
@@ -66,18 +84,27 @@ const Projects = () => {
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs font-light bg-white/10 text-gray-300 border-white/20">
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="text-xs font-light bg-white/10 text-gray-300 border-white/20"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-400/50 hover:text-cyan-400 font-light transform hover:scale-105 transition-all duration-300"
+                <a
+                  href="https://github.com/Divisukumar3010/WeatherHub"
+                  target="_blank"
                 >
-                  <Github className="w-4 h-4 mr-2" />
-                  View on GitHub
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-400/50 hover:text-cyan-400 font-light transform hover:scale-105 transition-all duration-300"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    View on GitHub
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
